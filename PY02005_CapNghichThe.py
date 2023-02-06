@@ -1,14 +1,11 @@
-def t(s):
-    n=0
-    for i in s:
-        n += ord(i)-ord('0')
-    return str(n)
-if __name__ =='__main__':
-    s=input()
+if __name__ == '__main__':
+    t = input()
     cnt=0
-    while(len(s)>1):
-        s=t(s)
-        cnt+=1
+    a=[int(i) for i in input().split()]
+    for i in range(len(a)):
+        for j in range(i+1,len(a)):
+            if(a[i]>a[j]):
+                cnt+=1
     print(cnt)
 
 #                --------            --------             ---------

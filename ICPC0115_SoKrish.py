@@ -1,15 +1,18 @@
-def t(s):
-    n=0
-    for i in s:
-        n += ord(i)-ord('0')
-    return str(n)
-if __name__ =='__main__':
-    s=input()
-    cnt=0
-    while(len(s)>1):
-        s=t(s)
-        cnt+=1
-    print(cnt)
+import math
+
+
+def kr(n):
+    s=0
+    m=n
+    while n>0 :
+        s+=math.factorial(n%10)
+        n//=10
+    if s==m :return 'Yes'
+    return 'No'
+
+if __name__ == '__main__':
+    for t in range(int(input())):
+        print(kr(int(input())))
 
 #                --------            --------             ---------
 #                -        -        -          -          -

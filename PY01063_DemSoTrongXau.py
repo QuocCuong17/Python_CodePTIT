@@ -1,15 +1,7 @@
-def t(s):
-    n=0
-    for i in s:
-        n += ord(i)-ord('0')
-    return str(n)
-if __name__ =='__main__':
+for t in range(int(input())):
     s=input()
-    cnt=0
-    while(len(s)>1):
-        s=t(s)
-        cnt+=1
-    print(cnt)
+    n=input()
+    print(len(s.split(n))-1)
 
 #                --------            --------             ---------
 #                -        -        -          -          -
